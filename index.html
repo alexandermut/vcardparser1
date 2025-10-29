@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard parser simple</title>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+    <script src="lib/script_labeled_data.js"></script>
+    <script src="lib/vornamen.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Kontakt 2 vCard parser</h1>
+      </header>
+
+      <main>
+        <div class="input-section">
+          <label for="impressum_text">Kontaktdaten hier einfügen</label>
+          <textarea autofocus id="impressum_text" name="impressum_text" rows="25" oninput="text_input()"></textarea>
+          <div class="button-group">
+            <a download="vcard.vcf" href='#' id="link" class="button">vCard herunterladen</a>
+            <button onClick="clear_textarea();">Text löschen</button>
+            <button onClick="window.location.reload();">Neu laden</button>
+          </div>
+        </div>
+
+        <div class="output-section">
+          <h2>Extrahierte Daten</h2>
+          <div id="results">
+            <p id="vornamen_find_all"></p>
+            <p id="vorname"></p>
+            <p id="nachname"></p>
+            <p id="vorname_check"></p>
+            <p id="nachname_check"></p>
+            <p id="vorname_nachname_gf"></p>
+            <p id="vorname_gf"></p>
+            <p id="vorname_gf_check"></p>
+            <p id="nachname_gf"></p>
+            <p id="job_title"></p>
+            <p id="firma"></p>
+            <p id="vorname_nachname"></p>
+            <p id="strasse"></p>
+            <p id="postleitzahl"></p>
+            <p id="ort"></p>
+            <p id="telefon"></p>
+            <p id="telefon_mobil"></p>
+            <p id="fax"></p>
+            <p id="email"></p>
+            <p id="internet"></p>
+            <p id="ustid"></p>
+            <p id="stnr"></p>
+            <p id="registergericht"></p>
+            <p id="registernummer"></p>
+          </div>
+          <div class="vcard-preview">
+            <label for="vcard">vCard-Vorschau</label>
+            <pre id="vcard"></pre>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <a href="impressum.html" class="button">Impressum</a>
+        <a href="datenschutz.html" class="button">Datenschutz</a>
+      </footer>
+    </div>
+  </body>
+
+</html>
